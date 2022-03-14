@@ -37,7 +37,8 @@
 				items in the repeater field
 			-->
 			<a id="my-repeater-show-more-link" href="javascript: my_repeater_show_more();"<?php 
-				if ($total < $count) {
+				// Hide the button on initial load if the total is smaller than the nmumber of rows to show
+				if ($total < $number) {
 					?> style="display: none;"<?php 
 				}
 				?>>Show More</a>
